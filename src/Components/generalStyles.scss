@@ -23,24 +23,33 @@ header {
     margin: 1rem;
 }
 
-.btn-primary {
-    background-color: #3a0ca3;
+.btn-primary, .btn-secondary {
     padding: .5rem;
     border: none;
     max-width: 10rem;
     font-size: 1.5rem;
     color: white;
     cursor: pointer;
-    transition: .3s;
-    position: absolute;
-    right: 1rem;
-    bottom: 0;
     border-radius: 10%;
+    transition: .3s;
+}
 
+.btn-primary {
+    background-color: #6e57a3;
+
+    &:hover {
+        background-color: #806ea8;
+    }
+}
+
+.btn-secondary {
+    background-color: #3a0ca3;
+    
     &:hover {
         background-color: #46219c;
     }
 }
+
 .newNote-container {
     position: relative;
     width: 50rem;
@@ -63,6 +72,12 @@ header {
             margin-bottom: 3.5rem;
         }
     }
+
+    .btn-primary {
+        position: absolute;
+        right: 1rem;
+        bottom: 0;
+    }
 }
 
 .savedNote-container {
@@ -75,7 +90,7 @@ header {
 
     .icon {
         position: absolute;
-        top: 1.15rem;
+        top: 1.3rem;
         cursor: pointer;
         transition: .3s;
         
@@ -93,15 +108,34 @@ header {
     }
 
     .savedNote {
-        h2 {
+        display: flex;
+        flex-direction: column;
+        
+        h2, input {
             font-size: 1.5rem;
             margin: .25rem 0 .5rem 0;
             max-width: 45rem;
             text-align: center;
         }
-        p {
+        p, textarea {
+            padding: .5rem;
             font-size: 1rem;
             text-align: justify;
+            margin-bottom: 1rem;
+        }
+
+        input {
+            max-width: 42rem;
+        }
+    }
+
+    .btn-container {
+        position: relative;
+        left: 18rem;
+
+        & > * {
+            width: 5.5rem;
+            margin: 0 .35rem;
         }
     }
 }
