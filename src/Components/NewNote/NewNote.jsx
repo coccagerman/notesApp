@@ -15,6 +15,7 @@ export default function NewNote () {
 
     return (
         <div className='newNote-container'>
+            <p>Write a new note!</p>
             <article className='newNote'>
                 <input type="text" placeholder='Note tittle' onChange={e => setNoteTittle(e.target.value)} />
                 <textarea rows = "5" cols = "60" placeholder='Note content' onChange={e => setNoteContent(e.target.value)} />

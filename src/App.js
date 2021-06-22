@@ -24,7 +24,7 @@ export default function App() {
   return (
     <div className='App'>
       <header><h1>The notes app</h1></header>
-      <button onClick={()=>console.log(savedNotes)}>test</button>
+
       <NewNote />
       {savedNotes.map(note => <SavedNote key={note.id} tittle={note.noteTittle} content={note.noteContent} id={note.id} />)}
       
